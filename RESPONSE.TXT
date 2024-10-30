@@ -1,5 +1,2 @@
 sample\hello.com
 sample\AUTOEXEC.BAT
-sample\R800.COM
-sample\R800D.COM
-sample\Z80D.COM
