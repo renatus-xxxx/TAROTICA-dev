@@ -15,17 +15,13 @@ tar -xf SL111.ZIP -v
 del SL111.ZIP
 cd ..\..\
 set "SAV_PATH=C:\Program Files (x86)\Steam\steamapps\common\TAROTICA VOO DOO\180621\TaroticaVooDoo_disk00.sav"
+set "SAV_DIR=C:\Program Files (x86)\Steam\steamapps\common\TAROTICA VOO DOO\180621"
 set "EXE_PATH=C:\Program Files (x86)\Steam\steamapps\common\TAROTICA VOO DOO\TaroticaVooDoo.exe"
 if exist "%EXE_PATH%" (
   if exist "%SAV_PATH%" (
-    for %%F in ("%SAV_PATH%") do (
-      set "SAV_DIR=%%~dpF"
-    )
-    if not exist "%SAV_DIR%backup" (
-      mkdir "%SAV_DIR%backup"
-    )
-    move /y "%SAV_PATH%" "%SAV_DIR%backup"
+    move /y "%SAV_PATH%" "backup"
   )
+  copy /y "sample\TaroticaVooDoo_disk00.sav" "%SAV_DIR%"
   exit /b 0
 ) else (
   echo Modify the bat file to set the full path to "TaroticaVooDoo.exe"
