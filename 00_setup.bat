@@ -13,6 +13,14 @@ cd savlist
 curl -OL --insecure https://github.com/Tatsu-syo/SAVList/releases/download/TAG-1.11/SL111.ZIP
 tar -xf SL111.ZIP -v
 del SL111.ZIP
+
+cd ..\
+mkdir vdman
+cd vdman
+curl -OL --insecure https://www.tatsu-syo.info/Archives/VDman201.zip
+tar -xf VDman201.ZIP -v
+del VDman201.zip
+
 cd ..\..\
 set "SAV_PATH=C:\Program Files (x86)\Steam\steamapps\common\TAROTICA VOO DOO\180621\TaroticaVooDoo_disk00.sav"
 set "SAV_DIR=C:\Program Files (x86)\Steam\steamapps\common\TAROTICA VOO DOO\180621"
