@@ -16,6 +16,7 @@ if exist "%EXE_PATH%" (
     bin\vdman\dsk2sav.exe %1 "%SAV_PATH%"
     taskkill /F /IM "TaroticaVooDoo.exe" >nul 2>&1
     start "" "%EXE_PATH%"
+    exit /b 0
   )  else (
     echo Modify the bat file to set the full path to "TaroticaVooDoo_disk00.sav"
     echo (—á:"C:\Program Files (x86)\Steam\steamapps\common\TAROTICA VOO DOO\180621\TaroticaVooDoo_disk00.sav")
